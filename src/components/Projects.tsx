@@ -108,12 +108,6 @@ const Projects = () => {
       isGenAI: false,
     },
     {
-      title: 'PayEase',
-      description: 'Java-based fees management system with automated calculations and payment gateway integration.',
-      tags: ['Java'],
-      isGenAI: false,
-    },
-    {
       title: 'AcademEase',
       description: 'C++ console-based student record management system with persistent storage.',
       tags: ['C++'],

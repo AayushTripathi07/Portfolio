@@ -25,17 +25,30 @@ const Projects = () => {
 
   const featuredProjects = [
     {
-      title: 'AI Resume Builder & LinkedIn Intelligence',
-      description: 'LLM-powered resume analysis system that evaluates structure, skills, strengths, weaknesses, and suggests job roles.',
+      title: 'Resume Intelligence System using Endee Vector Database',
+      description: 'Semantic resume search engine using Sentence Transformers embeddings and Endee vector database for similarity-based retrieval.',
       highlights: [
-        'Processes 50+ resume attributes using semantic chunking and embeddings',
-        'FAISS vector search achieves 95%+ accuracy in skill matching',
-        'Generates structured feedback with job role recommendations',
-        'Retrieval-augmented generation pipeline reduces hallucinations',
+        'Built semantic resume search engine using Sentence Transformers embeddings and Endee vector database',
+        'Implemented PDF parsing, embedding generation, and vector indexing for natural language recruiter queries',
+        'Designed Streamlit interface enabling recruiters to search resumes using plain English queries',
+        'Enabled semantic candidate matching beyond traditional keyword search',
       ],
-      tags: ['Python', 'Gemini API', 'LangChain', 'FAISS', 'Flask'],
+      tags: ['Python', 'Streamlit', 'Sentence Transformers', 'Endee Vector Database', 'NLP'],
       isGenAI: true,
-      architecture: 'Input Resume / LinkedIn Profile → Text Parsing → Section Extraction → NLP Skill Matching → Job Description Matching → Resume Scoring Engine → Optimization Suggestions',
+      architecture: 'Resume PDFs → Text Extraction → Sentence Embeddings → Endee Vector Index → Query Embedding → Similarity Search → Ranked Resume Results',
+    },
+    {
+      title: 'AI Resume Checker & LinkedIn Job Scraper',
+      description: 'Generative AI-powered resume analysis system using Google Gemini with ATS compatibility checking and LinkedIn job scraping.',
+      highlights: [
+        'Built Generative AI-powered resume analysis system using Gemini to evaluate candidate profiles',
+        'Implemented ATS compatibility checking with resume summaries and optimization suggestions',
+        'Developed LinkedIn job scraping module to retrieve relevant job listings',
+        'Designed Streamlit interface for uploading resumes and receiving structured AI feedback',
+      ],
+      tags: ['Python', 'Streamlit', 'Google Gemini API', 'Web Scraping', 'NLP'],
+      isGenAI: true,
+      architecture: 'Resume Upload → Text Extraction → Content Parsing → Gemini LLM Analysis → ATS Evaluation → Resume Feedback → LinkedIn Job Scraping',
     },
     {
       title: 'AI Fact Checker',
@@ -51,29 +64,17 @@ const Projects = () => {
       architecture: 'Document / PDF Input → Claim Extraction (LLM) → Web Search (Serper API) → Evidence Retrieval → LLM Verification → Fact Classification → Explanation Generation',
     },
     {
-      title: 'Resume Intelligence System using Endee Vector Database',
-      description: 'Semantic resume search engine using Sentence Transformers embeddings and Endee vector database for similarity-based retrieval.',
-      highlights: [
-        'Built semantic resume search engine using Sentence Transformers embeddings and Endee vector database',
-        'Implemented PDF parsing, embedding generation, and vector indexing for natural language recruiter queries',
-        'Designed Streamlit interface enabling recruiters to search resumes using plain English queries',
-        'Enabled semantic candidate matching beyond traditional keyword search',
-      ],
-      tags: ['Python', 'Streamlit', 'Sentence Transformers', 'Endee Vector Database', 'NLP'],
-      isGenAI: true,
-      architecture: 'Resume PDFs → Text Extraction → Sentence Embeddings → Endee Vector Index → Query Embedding → Similarity Search → Ranked Resume Results',
-    },
-    {
       title: 'StockVision – Stock Price Forecasting',
-      description: 'Hybrid forecasting pipeline comparing ARIMA and LSTM models for stock price prediction.',
+      description: 'Hybrid forecasting pipeline comparing ARIMA and LSTM models for accurate stock price predictions.',
       highlights: [
         'Built hybrid forecasting pipeline comparing ARIMA and LSTM models for stock price prediction',
         'Performed time-series preprocessing, scaling, and feature engineering on historical market data',
-        'Evaluated model performance using RMSE and MAE metrics',
+        'Evaluated model performance using RMSE and MAE metrics on validation datasets',
         'Visualized actual vs predicted price trends to analyze forecasting reliability',
       ],
       tags: ['Python', 'ARIMA', 'LSTM', 'TensorFlow', 'Time Series Analysis'],
       isGenAI: false,
+      architecture: 'Stock Data → Preprocessing → Feature Engineering → ARIMA / LSTM Training → Price Prediction → RMSE / MAE Evaluation',
     },
   ];
 
@@ -163,7 +164,7 @@ const Projects = () => {
         </ul>
       </div>
 
-      {project.isGenAI && (
+      {project.architecture && (
         <div className="mb-6">
           <button
             onClick={() => setExpandedArchitecture(expandedArchitecture === project.title ? null : project.title)}

@@ -35,7 +35,7 @@ const Projects = () => {
       ],
       tags: ['Python', 'Gemini API', 'LangChain', 'FAISS', 'Flask'],
       isGenAI: true,
-      architecture: 'Input → Text Chunking → Embeddings → Vector Store (FAISS) → Retrieval → LLM → Structured Output',
+      architecture: 'Input Resume / LinkedIn Profile → Text Parsing → Section Extraction → NLP Skill Matching → Job Description Matching → Resume Scoring Engine → Optimization Suggestions',
     },
     {
       title: 'AI Fact Checker',
@@ -48,56 +48,63 @@ const Projects = () => {
       ],
       tags: ['Python', 'Streamlit', 'Gemini API', 'Serper API'],
       isGenAI: true,
-      architecture: 'Input → Text Chunking → Embeddings → Vector Store (FAISS) → Retrieval → LLM → Structured Output',
+      architecture: 'Document / PDF Input → Claim Extraction (LLM) → Web Search (Serper API) → Evidence Retrieval → LLM Verification → Fact Classification → Explanation Generation',
     },
     {
-      title: 'Trader Performance vs Market Sentiment Analysis',
-      description: 'Behavioral finance ML project analyzing how market sentiment (Fear vs Greed) influences trader profitability and trading behavior.',
+      title: 'Resume Intelligence System using Endee Vector Database',
+      description: 'Semantic resume search engine using Sentence Transformers embeddings and Endee vector database for similarity-based retrieval.',
       highlights: [
-        'Merged 10K+ trader transactions with Bitcoin sentiment timeseries',
-        'Engineered 30+ behavioral features with time-based validation to prevent data leakage',
-        'Gradient Boosting classifier achieved 0.82 F1-score on trader segmentation',
-        'Identified 5 distinct trader archetypes based on risk-adjusted returns',
+        'Built semantic resume search engine using Sentence Transformers embeddings and Endee vector database',
+        'Implemented PDF parsing, embedding generation, and vector indexing for natural language recruiter queries',
+        'Designed Streamlit interface enabling recruiters to search resumes using plain English queries',
+        'Enabled semantic candidate matching beyond traditional keyword search',
       ],
-      tags: ['Python', 'Pandas', 'Scikit-learn', 'Matplotlib'],
-      isGenAI: false,
+      tags: ['Python', 'Streamlit', 'Sentence Transformers', 'Endee Vector Database', 'NLP'],
+      isGenAI: true,
+      architecture: 'Resume PDFs → Text Extraction → Sentence Embeddings → Endee Vector Index → Query Embedding → Similarity Search → Ranked Resume Results',
     },
     {
-      title: 'Customer Lifetime Value Prediction',
-      description: 'End-to-end ML pipeline predicting customer lifetime value using RFM analysis for business-focused customer segmentation.',
+      title: 'StockVision – Stock Price Forecasting',
+      description: 'Hybrid forecasting pipeline comparing ARIMA and LSTM models for stock price prediction.',
       highlights: [
-        'MySQL ETL pipeline processes 50K+ customer records with SQLAlchemy',
-        'RFM engineering created 8 customer segments with distinct behaviors',
-        'Random Forest model achieved R² = 0.78 on unseen validation set',
-        'CLV predictions enable targeted retention campaigns for high-value segments',
+        'Built hybrid forecasting pipeline comparing ARIMA and LSTM models for stock price prediction',
+        'Performed time-series preprocessing, scaling, and feature engineering on historical market data',
+        'Evaluated model performance using RMSE and MAE metrics',
+        'Visualized actual vs predicted price trends to analyze forecasting reliability',
       ],
-      tags: ['Python', 'MySQL', 'Scikit-learn', 'SQLAlchemy'],
+      tags: ['Python', 'ARIMA', 'LSTM', 'TensorFlow', 'Time Series Analysis'],
       isGenAI: false,
     },
   ];
 
   const additionalProjects = [
     {
-      title: 'StockVision',
-      description: 'Time-series forecasting comparing ARIMA and LSTM for stock price prediction.',
-      tags: ['Python', 'ARIMA', 'TensorFlow', 'PyTorch'],
+      title: 'Trader Sentiment Analysis',
+      description: 'Behavioral finance ML analyzing how market sentiment influences trader profitability.',
+      tags: ['Python', 'Pandas', 'Scikit-learn', 'Matplotlib'],
+      isGenAI: false,
+    },
+    {
+      title: 'Customer Lifetime Value Prediction',
+      description: 'ML pipeline predicting customer lifetime value using RFM analysis.',
+      tags: ['Python', 'MySQL', 'Scikit-learn', 'SQLAlchemy'],
       isGenAI: false,
     },
     {
       title: 'Marketing Campaign ROI Analysis',
-      description: 'SQL and Tableau-based analytics evaluating marketing channel performance and attribution.',
+      description: 'SQL and Tableau-based analytics evaluating marketing channel performance.',
       tags: ['MySQL', 'SQL', 'Tableau'],
       isGenAI: false,
     },
     {
       title: 'Breast Cancer Prediction',
-      description: 'ML model comparing Logistic Regression, SVM, and Random Forest for tumor classification.',
+      description: 'ML model comparing Logistic Regression, SVM, and Random Forest for classification.',
       tags: ['Python', 'Scikit-learn', 'PCA'],
       isGenAI: false,
     },
     {
       title: 'Flight Price Prediction',
-      description: 'Regression model with feature engineering achieving R² ≈ 0.81 on airline ticket price prediction.',
+      description: 'Regression model with feature engineering achieving R² ≈ 0.81 on price prediction.',
       tags: ['Python', 'Pandas', 'Scikit-learn'],
       isGenAI: false,
     },
@@ -108,9 +115,15 @@ const Projects = () => {
       isGenAI: false,
     },
     {
-      title: 'AcademEase',
-      description: 'C++ console-based student record management system with persistent storage.',
+      title: 'AcademEase – Student Record System',
+      description: 'C++ console-based student record management with persistent storage.',
       tags: ['C++'],
+      isGenAI: false,
+    },
+    {
+      title: 'Caress – Mental Health Companion App',
+      description: 'Mental health support application with conversational AI interaction.',
+      tags: ['React', 'AI', 'Mental Health Tech'],
       isGenAI: false,
     },
   ];
@@ -250,7 +263,7 @@ const Projects = () => {
             <h3 className={`text-2xl font-bold mb-8 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               Additional Projects
             </h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {additionalProjects.map((project, index) => (
                 <AdditionalCard key={project.title} project={project} index={index} />
               ))}

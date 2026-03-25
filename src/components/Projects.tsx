@@ -37,6 +37,7 @@ const Projects = () => {
       tags: ['Python', 'Streamlit', 'TensorFlow', 'PyTorch', 'PatchTST', 'LSTM', 'ARIMA', 'Gemini', 'Groq', 'NLP'],
       isGenAI: true,
       architecture: 'Data Sources → Data Cleaning & Preprocessing → Feature Engineering → ARIMA + LSTM + PatchTST Models → Ensemble Forecasting → Sentiment Analysis (News/Reddit) → LLM Debate Engine (Bull vs Bear vs Judge) → Final Trading Insight + Visualization Dashboard',
+      github: 'https://github.com/AayushTripathi07/stockvision-ai',
     },
     {
       title: 'Resume Intelligence System using Endee Vector Database',
@@ -50,6 +51,7 @@ const Projects = () => {
       tags: ['Python', 'Streamlit', 'Sentence Transformers', 'Endee Vector Database', 'NLP'],
       isGenAI: true,
       architecture: 'Resume PDFs → Text Extraction → Sentence Embeddings → Endee Vector Index → Query Embedding → Similarity Search → Ranked Resume Results',
+      github: 'https://github.com/AayushTripathi07/resume-intelligence',
     },
     {
       title: 'AI Resume Checker & LinkedIn Job Scraper',
@@ -63,6 +65,7 @@ const Projects = () => {
       tags: ['Python', 'Streamlit', 'Google Gemini API', 'Web Scraping', 'NLP'],
       isGenAI: true,
       architecture: 'Resume Upload → Text Extraction → Content Parsing → Gemini LLM Analysis → ATS Evaluation → Resume Feedback → LinkedIn Job Scraping',
+      github: 'https://github.com/AayushTripathi07/ai-resume-checker',
     },
     {
       title: 'AI Fact Checker',
@@ -76,6 +79,7 @@ const Projects = () => {
       tags: ['Python', 'Streamlit', 'Gemini API', 'Serper API'],
       isGenAI: true,
       architecture: 'Document / PDF Input → Claim Extraction (LLM) → Web Search (Serper API) → Evidence Retrieval → LLM Verification → Fact Classification → Explanation Generation',
+      github: 'https://github.com/AayushTripathi07/Fact-Checking-Web-App',
     },
   ];
 
@@ -85,60 +89,70 @@ const Projects = () => {
       description: 'Hybrid forecasting pipeline comparing ARIMA and LSTM models for accurate stock price predictions.',
       tags: ['Python', 'ARIMA', 'LSTM', 'TensorFlow'],
       isGenAI: false,
+      github: 'https://github.com/AayushTripathi07/StockVision',
     },
     {
       title: 'PayEase – Fees Management System',
       description: 'Java-based fee management system designed to automate payment processing, reporting, and financial tracking.',
       tags: ['Java', 'NetBeans Platform', 'OOP'],
       isGenAI: false,
+      github: 'https://github.com/AayushTripathi07/PayEase',
     },
     {
       title: 'Trader Sentiment Analysis',
       description: 'Behavioral finance ML analyzing how market sentiment influences trader profitability.',
       tags: ['Python', 'Pandas', 'Scikit-learn', 'Matplotlib'],
       isGenAI: false,
+      github: 'https://github.com/AayushTripathi07/AayushTripathi07',
     },
     {
       title: 'Customer Lifetime Value Prediction',
       description: 'ML pipeline predicting customer lifetime value using RFM analysis.',
       tags: ['Python', 'MySQL', 'Scikit-learn', 'SQLAlchemy'],
       isGenAI: false,
+      github: 'https://github.com/AayushTripathi07/Customer-Lifetime-Value-Prediction',
     },
     {
       title: 'Marketing Campaign ROI Analysis',
       description: 'SQL and Tableau-based analytics evaluating marketing channel performance.',
       tags: ['MySQL', 'SQL', 'Tableau'],
       isGenAI: false,
+      github: 'https://github.com/AayushTripathi07/Marketing-Campaign-ROI-Analysis',
     },
     {
       title: 'Breast Cancer Prediction',
       description: 'ML model comparing Logistic Regression, SVM, and Random Forest for classification.',
       tags: ['Python', 'Scikit-learn', 'PCA'],
       isGenAI: false,
+      github: 'https://github.com/AayushTripathi07/Breast-Cancer-Prediction',
     },
     {
       title: 'Flight Price Prediction',
       description: 'Regression model with feature engineering achieving R² ≈ 0.81 on price prediction.',
       tags: ['Python', 'Pandas', 'Scikit-learn'],
       isGenAI: false,
+      github: 'https://github.com/AayushTripathi07/Flight_Price_Prediction',
     },
     {
       title: 'PulsePro – HR Analytics Dashboard',
       description: 'Power BI dashboard for workforce analytics and strategic planning.',
       tags: ['Power BI'],
       isGenAI: false,
+      github: 'https://github.com/AayushTripathi07/PulsePro',
     },
     {
       title: 'AcademEase – Student Record System',
       description: 'C++ console-based student record management with persistent storage.',
       tags: ['C++'],
       isGenAI: false,
+      github: 'https://github.com/AayushTripathi07/AcademEase',
     },
     {
       title: 'Caress – Mental Health Companion App',
       description: 'Mental health support application with conversational AI interaction.',
       tags: ['React', 'AI', 'Mental Health Tech'],
       isGenAI: false,
+      github: 'https://github.com/AayushTripathi07/Caress',
     },
   ];
 
@@ -156,7 +170,9 @@ const Projects = () => {
           <h3 className="text-xl font-bold leading-snug">{project.title}</h3>
         </div>
         <a
-          href="#"
+          href={project.github}
+          target="_blank"
+          rel="noopener noreferrer"
           className="ml-3 text-gray-400 hover:text-white transition-colors flex-shrink-0"
           title="GitHub"
         >
@@ -209,9 +225,14 @@ const Projects = () => {
         ))}
       </div>
 
-      <button className="inline-flex items-center text-sm font-medium text-gray-300 hover:text-white transition-colors">
+      <a
+        href={project.github}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center text-sm font-medium text-gray-300 hover:text-white transition-colors"
+      >
         View GitHub <Github size={14} className="ml-2" />
-      </button>
+      </a>
     </div>
   );
 
@@ -227,7 +248,9 @@ const Projects = () => {
       <div className="flex justify-between items-start mb-3">
         <h4 className="text-base font-semibold leading-snug pr-2">{project.title}</h4>
         <a
-          href="#"
+          href={project.github}
+          target="_blank"
+          rel="noopener noreferrer"
           className="text-gray-400 hover:text-white transition-colors flex-shrink-0"
           title="GitHub"
         >

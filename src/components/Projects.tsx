@@ -25,6 +25,20 @@ const Projects = () => {
 
   const featuredProjects = [
     {
+      title: 'StockVision AI – Intelligence-First Trading Terminal',
+      description: 'AI-powered financial intelligence platform combining multi-source data, ensemble forecasting, and LLM reasoning for comprehensive market analysis.',
+      highlights: [
+        'Multi-source data ingestion (Yahoo Finance, Alpha Vantage, Reddit, Groww)',
+        'Ensemble forecasting (PatchTST, LSTM, ARIMA) for robust predictions',
+        'AI debate engine (bull vs bear vs judge) with LLM reasoning',
+        'Sentiment analysis + market regime detection',
+        'RMSE/MAE evaluation and comprehensive visualization dashboard',
+      ],
+      tags: ['Python', 'Streamlit', 'TensorFlow', 'PyTorch', 'PatchTST', 'LSTM', 'ARIMA', 'Gemini', 'Groq', 'NLP'],
+      isGenAI: true,
+      architecture: 'Data Sources → Data Cleaning & Preprocessing → Feature Engineering → ARIMA + LSTM + PatchTST Models → Ensemble Forecasting → Sentiment Analysis (News/Reddit) → LLM Debate Engine (Bull vs Bear vs Judge) → Final Trading Insight + Visualization Dashboard',
+    },
+    {
       title: 'Resume Intelligence System using Endee Vector Database',
       description: 'Semantic resume search engine using Sentence Transformers embeddings and Endee vector database for similarity-based retrieval.',
       highlights: [
@@ -63,22 +77,21 @@ const Projects = () => {
       isGenAI: true,
       architecture: 'Document / PDF Input → Claim Extraction (LLM) → Web Search (Serper API) → Evidence Retrieval → LLM Verification → Fact Classification → Explanation Generation',
     },
-    {
-      title: 'StockVision – Stock Price Forecasting',
-      description: 'Hybrid forecasting pipeline comparing ARIMA and LSTM models for accurate stock price predictions.',
-      highlights: [
-        'Built hybrid forecasting pipeline comparing ARIMA and LSTM models for stock price prediction',
-        'Performed time-series preprocessing, scaling, and feature engineering on historical market data',
-        'Evaluated model performance using RMSE and MAE metrics on validation datasets',
-        'Visualized actual vs predicted price trends to analyze forecasting reliability',
-      ],
-      tags: ['Python', 'ARIMA', 'LSTM', 'TensorFlow', 'Time Series Analysis'],
-      isGenAI: false,
-      architecture: 'Stock Data → Preprocessing → Feature Engineering → ARIMA / LSTM Training → Price Prediction → RMSE / MAE Evaluation',
-    },
   ];
 
   const additionalProjects = [
+    {
+      title: 'StockVision – Stock Price Forecasting',
+      description: 'Hybrid forecasting pipeline comparing ARIMA and LSTM models for accurate stock price predictions.',
+      tags: ['Python', 'ARIMA', 'LSTM', 'TensorFlow'],
+      isGenAI: false,
+    },
+    {
+      title: 'PayEase – Fees Management System',
+      description: 'Java-based fee management system designed to automate payment processing, reporting, and financial tracking.',
+      tags: ['Java', 'NetBeans Platform', 'OOP'],
+      isGenAI: false,
+    },
     {
       title: 'Trader Sentiment Analysis',
       description: 'Behavioral finance ML analyzing how market sentiment influences trader profitability.',

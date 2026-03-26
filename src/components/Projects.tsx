@@ -92,18 +92,11 @@ const Projects = () => {
       github: 'https://github.com/AayushTripathi07/StockVision',
     },
     {
-      title: 'PayEase – Fees Management System',
-      description: 'Java-based fee management system designed to automate payment processing, reporting, and financial tracking.',
-      tags: ['Java', 'NetBeans Platform', 'OOP'],
-      isGenAI: false,
-      github: 'https://github.com/AayushTripathi07/PayEase',
-    },
-    {
       title: 'Trader Sentiment Analysis',
       description: 'Behavioral finance ML analyzing how market sentiment influences trader profitability.',
       tags: ['Python', 'Pandas', 'Scikit-learn', 'Matplotlib'],
       isGenAI: false,
-      github: 'https://github.com/AayushTripathi07/AayushTripathi07',
+      github: 'https://github.com/AayushTripathi07/Trader-Sentiment-Analysis',
     },
     {
       title: 'Customer Lifetime Value Prediction',
@@ -139,13 +132,6 @@ const Projects = () => {
       tags: ['Power BI'],
       isGenAI: false,
       github: 'https://github.com/AayushTripathi07/PulsePro',
-    },
-    {
-      title: 'AcademEase – Student Record System',
-      description: 'C++ console-based student record management with persistent storage.',
-      tags: ['C++'],
-      isGenAI: false,
-      github: 'https://github.com/AayushTripathi07/AcademEase',
     },
     {
       title: 'Caress – Mental Health Companion App',

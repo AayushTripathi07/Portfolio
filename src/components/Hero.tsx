@@ -74,7 +74,7 @@ const Hero = () => {
               View Projects
             </button>
             <a
-              href="https://drive.google.com/file/d/1kYOkDuaMpH_DgfTZACYRhtyqmJwA8LLR/view?usp=sharing"
+              href="https://drive.google.com/file/d/1-hufVqn1wOQyimjtvRxnh9sV_t8vQqcl/view"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-3 border-2 border-white rounded-full font-medium hover:bg-white hover:text-black transition-all duration-300 hover:shadow-[0_0_20px_rgba(255,255,255,0.5)]"

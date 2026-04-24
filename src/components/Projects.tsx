@@ -95,6 +95,13 @@ const Projects = () => {
       github: 'https://github.com/AayushTripathi07/resume-intelligence',
     },
     {
+      title: 'Resume Intelligence System (Vector DB)',
+      description: 'Semantic resume search engine using Sentence Transformers embeddings and Endee vector database.',
+      tags: ['Python', 'Streamlit', 'Sentence Transformers', 'Endee Vector DB'],
+      isGenAI: true,
+      github: 'https://github.com/AayushTripathi07/resume-intelligence',
+    },
+    {
       title: 'AI Resume Checker + LinkedIn Scraper',
       description: 'Generative AI-powered resume analysis with ATS compatibility and LinkedIn job scraping.',
       tags: ['Python', 'Streamlit', 'Google Gemini API', 'Web Scraping'],
@@ -116,6 +123,13 @@ const Projects = () => {
       github: 'https://github.com/AayushTripathi07/marketing-analytics-ai-pipeline',
     },
     {
+      title: 'Marketing Campaign ROI Analysis',
+      description: 'SQL and Tableau-based analytics evaluating marketing channel performance.',
+      tags: ['MySQL', 'SQL', 'Tableau'],
+      isGenAI: false,
+      github: 'https://github.com/AayushTripathi07/Marketing-Campaign-ROI-Analysis',
+    },
+    {
       title: 'PulsePro',
       description: 'Power BI dashboard for workforce analytics and strategic planning.',
       tags: ['Power BI'],
@@ -123,7 +137,7 @@ const Projects = () => {
       github: 'https://github.com/AayushTripathi07/PulsePro',
     },
     {
-      title: 'StockVision (Basic)',
+      title: 'StockVision',
       description: 'Hybrid forecasting pipeline comparing ARIMA and LSTM models for stock price predictions.',
       tags: ['Python', 'ARIMA', 'LSTM', 'TensorFlow'],
       isGenAI: false,
